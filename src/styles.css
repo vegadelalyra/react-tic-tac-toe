@@ -79,10 +79,10 @@ ul {
 .square:hover {
   border-color: #646cff;
 }
-button:focus,
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 
 .board-row:after {
@@ -159,7 +159,7 @@ ol {
 
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: 1.5em;
+    font-size: 2rem;
   }  
 
   .square {  

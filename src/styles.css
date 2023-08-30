@@ -165,7 +165,7 @@ ol {
   .square {  
     height: var(--mobileSize);
     width: var(--mobileSize);
-    font-size: 5rem;
+    font-size: 4rem;
   }
   body {
     place-items: start;
@@ -180,6 +180,6 @@ ol {
   .square {  
     height: 9vh;
     width: 9vh;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }

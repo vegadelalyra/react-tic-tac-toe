@@ -12,13 +12,13 @@ function Square({ value, onSquareClick }) {
 function Board({ xIsNext, squares, onPlay }) {
     const winner = calculateWinner(squares)
     const status = winner ? 'Winner: ' + winner
-    : 'Next player: ' + (xIsNext ? "X" : '0')
+    : 'Next player: ' + (xIsNext ? "X" : 'O')
 
     function handleClick(i) {
         if (calculateWinner(squares) || squares[i]) return
 
         const nextSquares = squares.slice()
-        nextSquares[i] = xIsNext ? 'X' : '0'
+        nextSquares[i] = xIsNext ? 'X' : 'O'
         onPlay(nextSquares)
     }
 

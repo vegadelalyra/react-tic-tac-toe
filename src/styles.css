@@ -12,7 +12,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   display:flex;
-  --size: 17vh;
+  --desktopSize: 17vh;
+  --mobileSize: 8vh;
 }
 
 * {
@@ -32,6 +33,12 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 code {
@@ -51,12 +58,18 @@ ul {
   float: left;
   font-size: 8rem;
   font-weight: bold;
-  height: var(--size);
-  max-height: var(--size);
-  width: var(--size);
-  max-width:var(--size);
+  height: var(--desktopSize);
+  max-height: var(--desktopSize);
+  width: var(--desktopSize);
+  max-width:var(--desktopSize);
   padding: 0;
   cursor: pointer;
+  text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
   display: flex;
   justify-content: center;
   transition: border-color 0.25s;
@@ -130,9 +143,22 @@ ol {
   background-color: coral;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 900px) {
   .game { 
     flex-direction: column;
     gap: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .square {  
+    height: var(--mobileSize);
+    max-height: var(--mobileSize);
+    width: var(--mobileSize);
+    max-width:var(--mobileSize);
+    font-size: 3rem;
+  }
+  body {
+    place-items: start;
   }
 }

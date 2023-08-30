@@ -13,7 +13,7 @@
   -webkit-text-size-adjust: 100%;
   display:flex;
   --desktopSize: 17vh;
-  --mobileSize: 6vh;
+  --mobileSize: 10vh;
 }
 
 * {
@@ -133,6 +133,8 @@ button:focus-visible {
 }
 
 ol {
+  position: relative;
+  right: 10px;
   padding: 0;
   list-style: none;
   display: grid;
@@ -149,19 +151,21 @@ ol {
     flex-direction: column;
     gap: 20px;
   }
+
+  .square {
+    font-size: 6rem;
+  }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   h1 {
     font-size: 1.5em;
   }  
 
   .square {  
     height: var(--mobileSize);
-    max-height: var(--mobileSize);
     width: var(--mobileSize);
-    max-width:var(--mobileSize);
-    font-size: 2rem;
+    font-size: 5rem;
   }
   body {
     place-items: start;
@@ -169,5 +173,13 @@ ol {
 
   .times {
     min-width: 70vw;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .square {  
+    height: 9vh;
+    width: 9vh;
+    font-size: 3rem;
   }
 }

@@ -13,7 +13,7 @@
   -webkit-text-size-adjust: 100%;
   display:flex;
   --desktopSize: 17vh;
-  --mobileSize: 8vh;
+  --mobileSize: 6vh;
 }
 
 * {
@@ -115,9 +115,10 @@ button:focus-visible {
   background: #fff;
   background-color: #1a1a1a;
   border: 1px solid transparent;
-  min-width: 170px;
+  min-width: 300px;
   border-radius: 3px;
   font-weight: bold;
+  font-size: 1.5rem;
   padding: 1rem;
   cursor: pointer;
   display: flex;
@@ -146,19 +147,27 @@ ol {
 @media screen and (max-width: 900px) {
   .game { 
     flex-direction: column;
-    gap: 0;
+    gap: 20px;
   }
 }
 
 @media screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.5em;
+  }  
+
   .square {  
     height: var(--mobileSize);
     max-height: var(--mobileSize);
     width: var(--mobileSize);
     max-width:var(--mobileSize);
-    font-size: 3rem;
+    font-size: 2rem;
   }
   body {
     place-items: start;
+  }
+
+  .times {
+    min-width: 70vw;
   }
 }
